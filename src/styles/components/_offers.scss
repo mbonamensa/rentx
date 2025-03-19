@@ -1,0 +1,42 @@
+.offering {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    
+    @include md {
+        gap: 3rem;
+        flex-direction: row;
+
+    }
+
+    div {
+        width: 100%;
+
+        @include md {
+            max-width: 400px;
+        }
+
+
+        h3 {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    img {
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .mid {
+        flex-direction: row-reverse;
+    }
+}
+
+.offering:nth-child(2) {
+    @include md {
+        flex-direction: row-reverse;
+    }
+}

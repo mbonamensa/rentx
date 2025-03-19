@@ -1,0 +1,87 @@
+button {
+    cursor: pointer;
+}
+
+.btn {
+    background-color: $secondary;
+    border: none;
+    color: $accent1;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    width: 100%;
+    display: block;
+    background-color: $tertiary;
+    max-width: 233px;
+    padding: 0.75rem 0.75rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    // margin-top: 1.5rem;
+    // transition: background-color 0.3s ease;
+    
+    @include sm {
+        padding: 0.75rem 1.5rem;
+        font-size: revert;
+
+    }
+
+    .browse {
+        transition: margin-left 0.4s ease-in-out;
+    }
+    
+    &:hover .browse {
+        margin-left: 5px;
+
+    }
+
+    .double-arrow-right {
+        transition: margin-left 0.4s ease-in-out;
+    }
+    
+    &:hover .double-arrow-right {
+        margin-left: 5px;
+
+    }
+}
+
+.btn-secondary {
+    border: 1px solid $accent2;
+    background-color: $accent2;
+    color: $accent1;
+    width: 70px;
+    text-align: center;
+    padding: 5px;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $secondary;
+    }
+
+}
+
+.btn-tertiary {
+    border: 1px solid $accent1;
+    background-color: none;
+    color: $accent1;
+    width: 100%;
+    max-width: 330px;
+    text-align: center;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: $accent1;
+        color: $tertiary;
+    }
+}
+
+.btn-plain {
+    border: none;
+    background: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+

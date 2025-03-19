@@ -1,0 +1,22 @@
+.testimonial-card {
+    width: 100%;
+    background-color: $primary;
+    border-radius: 20px;
+    
+    // @include breakpoint(620px) {
+    //     max-width: 250px;
+    // }
+
+    img {
+        border-radius: 20px;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.testimonials {
+    gap: 3rem;
+
+    @include breakpoint(620px) {
+        flex-flow: row wrap;
+    }
+}

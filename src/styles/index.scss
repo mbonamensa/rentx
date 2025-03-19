@@ -1,0 +1,27 @@
+// variables & functions
+@import "variables";
+
+// base & layout
+@import "breakpoints";
+@import "grid";
+@import "base";
+
+// fonts
+@import "fonts";
+
+// colors
+@import "colors";
+
+// components (button, card, navbar)
+@import "components/header";
+@import "components/button";
+@import "components/apartment";
+@import "components/offers";
+@import "components/testimonials";
+@import "components/bottomcta";
+@import "components/about";
+@import "components/footer";
+
+
+// utilities (margin, padding, opacity)
+@import "utilities"

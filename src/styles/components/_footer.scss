@@ -1,0 +1,53 @@
+footer {
+    text-align: center;
+
+    @include sm {
+        text-align: left;
+        align-items: baseline;
+    }
+
+    .footer-top {
+        @include sm {
+            flex-flow: row wrap;
+        }
+
+        @include lg {
+            flex-flow: row nowrap;
+        }
+    }
+
+    .footer-contact, .footer-faq, .footer-links, .footer-subscribe {
+        @include sm {
+            width: 50%;
+        }
+    }
+
+    .social-icons {
+        gap: 0.8rem;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    input {
+        background: none;
+        border: none;
+        border-bottom: 1px solid $secondary;
+        margin: 0.3rem;
+        padding: 0.35rem;
+        
+        &::placeholder {
+            color: $secondary;
+            opacity: 0.8;
+
+        }
+    }
+
+    footer a {
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

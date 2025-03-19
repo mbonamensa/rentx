@@ -1,0 +1,57 @@
+.about-container {
+
+    // @include breakpoint (1020px) {
+    //     padding: 0 5rem;
+    // }
+    // @include lg {
+
+    //     padding: 0 10rem;
+    // }
+}
+
+.about-list {
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+    
+    svg {
+        height: 2.5rem;
+        width: 2.5rem;
+        color: $secondary;
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+
+        @include md {
+
+            width: 45%;
+            max-width: 450px;
+        }
+
+    }
+
+    @include md {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.about-cta {
+    padding: 2rem;
+    
+    @include md {
+        padding: 4.5rem
+    }
+    p {
+        @include font($font-md, $bold);
+        
+        @include md {
+           @include font($font-lg, $bold);
+       }
+    }
+}

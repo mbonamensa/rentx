@@ -1,0 +1,156 @@
+$grid-columns: 12;
+$grid-gaps: (
+    "0": 0,
+    "1": $base-grid-gap,
+    "2": $base-grid-gap * 2,
+    "3": $base-grid-gap * 3,
+    "4": $base-grid-gap * 4,
+    "5": $base-grid-gap * 5,
+    "6": $base-grid-gap * 6,
+    "7": $base-grid-gap * 7,
+    "8": $base-grid-gap * 8,
+);
+
+@mixin gridSizes($column) {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: calc($column * 100% / $grid-columns);
+}
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    
+    @include md {
+        padding: 0 3rem;
+
+    }
+}
+
+/* Flex grid system */
+
+.row {
+    flex-flow: row;
+}
+
+.row-r {
+    flex-flow: row-reverse;
+}
+
+.column {
+    flex-flow: column;
+}
+
+.column-r {
+    flex-flow: column-reverse;
+}
+
+.wrap {
+    flex-flow: wrap;
+}
+
+.wrap-r {
+    flex-flow: wrap-reverse;
+}
+
+.nowrap {
+    flex-flow: nowrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+.align-start {
+    align-items: start;
+}
+
+.align-end {
+    align-items: end;
+}
+
+.align-normal {
+    align-items: normal;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.justify-normal {
+    justify-content: normal;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+@each $key, $val in $grid-gaps {
+    .gap-#{$key} > * {
+        padding: $val
+    }
+}
+
+
+@include xs {
+    @for $i from 1 through $grid-columns {
+        .col-#{$i}-xs {
+            @include gridSizes($i)
+        }
+    }
+}
+
+@include sm {
+    @for $i from 1 through $grid-columns {
+        .col-#{$i}-sm {
+            @include gridSizes($i)
+        }
+    }
+}
+
+@include md {
+    @for $i from 1 through $grid-columns {
+        .col-#{$i}-md {
+            @include gridSizes($i)
+        }
+    }
+}
+
+@include lg {
+    @for $i from 1 through $grid-columns {
+        .col-#{$i}-lg {
+            @include gridSizes($i)
+        }
+    }
+}
+
+@include xl {
+    @for $i from 1 through $grid-columns {
+        .col-#{$i}-xl {
+            @include gridSizes($i)
+        }
+    }
+}
